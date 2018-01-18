@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/inser_vech"
+            android:title="Ввести названия автомобилей" />
+        <item
+            android:id="@+id/inser_planes"
+            android:title="Ввести название самолетов" />
+        <item
+            android:id="@+id/insert_ships"
+            android:title="Ввести название кораблей" />
+
+        <item
+            android:id="@+id/use_sandart_list"
+            android:title="Использовать стандартные списки" />
+
+        <item
+            android:id="@+id/sort_list"
+            android:title="Сортировать все списки\n в алфавитном порядке" />
+
+    </group>
+
+</menu>
