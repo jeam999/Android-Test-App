@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -25,8 +24,6 @@ public class MainActivity extends AppCompatActivity
     public static ArrayList<Vehicle> vehicles = new ArrayList<>();
     public static ArrayList<Plane> planes = new ArrayList<>();
     public static ArrayList<Ship> ships = new ArrayList<>();
-
-    public static ArrayList<LinearLayout> linearLayoutSortingList =new ArrayList<>();
 
     public static TextView textArrayNamePOne;
     public static LinearLayout layoutArrayPOne;
@@ -47,8 +44,6 @@ public class MainActivity extends AppCompatActivity
     public static final String TYPE_NAME_PLANE="Plane";
     public static final String TYPE_NAME_SHIP="Ship";
 
-    public static final LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT);
 
     public static final LinearLayout.LayoutParams Weight = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT, 1f);
 
@@ -92,7 +87,6 @@ public class MainActivity extends AppCompatActivity
         switch (arrayLists.get(0).get(0).getClass().getSimpleName()){
             case TYPE_NAME_VEHICLE:{
                 LinearLayout linearLayoutSorting=new LinearLayout(context);
-                //linearLayoutSortingList.add(new LinearLayout(context));
                 textArrayNamePOne.setText(arrayLists.get(0).get(0).getClass().getSimpleName());
                 layoutArrayPOne.addView(putFirstArrayToTextViews(linearLayoutSorting,sortingTypes,arrayLists));
                 break;
@@ -113,7 +107,6 @@ public class MainActivity extends AppCompatActivity
     }
 
     public static LinearLayout putFirstArrayToTextViews(LinearLayout linearLayoutSorting,String[] sortingTypes,ArrayList<ArrayList<? extends Mechanizm>> arrayLists){
-        //LinearLayout linearLayoutSorting=new LinearLayout(context);
 
         linearLayoutSorting.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -160,15 +153,6 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.inser_vech) {
-            // Handle the camera action
-        } else if (id == R.id.inser_planes) {
-
-        } else if (id == R.id.insert_ships) {
-        } else if (id == R.id.use_sandart_list) {
-        } else if (id == R.id.sort_list) {
-        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
